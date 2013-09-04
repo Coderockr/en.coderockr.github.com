@@ -1,0 +1,255 @@
+---
+---
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Coderockr</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+  <link rel="stylesheet" href="/public/styles/style.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300|Hammersmith+One&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+  <script src="/public/scripts/libs/modernizr-2.0.6.min.js"></script>
+</head>
+
+<body>
+  <input type="checkbox" id="openmenu" name="openmenu" value="openmenu" />
+  <div id="container">
+    <nav class="wrap" id="menu">
+      <ul>
+        <li><a href="#home" class="home active" title="Topo">Home</a></li>
+        <li><a href="#servicos" class="services" title="Serviços">Serviços</a></li>
+        <li><a href="#projetos" class="projects" title="Projetos">Projetos</a></li>
+        <li><a href="#clientes" class="clients" title="Clientes">Clientes</a></li>
+        <li><a href="#sobre" class="about" title="Sobre">Sobre</a></li>
+        <li><a href="http://blog.coderockr.com" class="blog" title="Blog" target="_blank">Blog</a></li>
+        <li class="last"><a href="#contato" class="contact" title="Contato">Contato</a></li>
+      </ul>
+    </nav>
+    <label class="tapoverlay" for="openmenu"></label>
+
+    <header>
+      <div class="wrap">
+        <h1><a href="/" title="Coderockr"><img src="/public/images/coderockr-logo.png" width="130" height="42" alt="Coderockr" /></a></h1>
+        <label for="openmenu" class="bt-menu">
+          <span class="line1"></span>
+          <span class="line2"></span>
+          <span class="line3"></span>
+        </label>
+      </div>
+    </header>
+
+    <div id="main" role="main">
+      <section id="home"><a name="home" class="anchor clearfix"></a>
+        <div class="wrap">
+          <h2>en-Creating Apps that Rock</h2>
+        </div>
+        <nav class="clearfix">
+          <div class="wrap">
+            <ul>
+              {% include destaque_1.html %}
+              {% include destaque_2.html %}
+              {% include destaque_3.html %}
+            </ul>
+          </div>
+        </nav>
+      </section>
+      <section id="servicos"><a name="servicos" class="anchor clearfix"></a>
+        <article class="wrap">
+          <h2>A Coderockr é uma empresa que acredita que o desenvolvimento de aplicativos e sistemas <span>é uma arte,</span> que deve ser feita com<span> paixão e dedicação.</span></h2>
+        </article>
+        <div class="wrap">
+          <ul class="clearfix">
+            <li>
+              <span>1</span>
+              <article>
+                <h3>Desenvolvimento Web</h3>
+                <p>Trabalhamos com PHP e JavaScript, frameworks como Zend Framework, Doctrine, Slim, interfaces em HTML5 e CSS3.</p>
+              </article>
+            </li>
+            <li>
+              <span>2</span>
+              <article>
+                <h3>Desenvolvimento mobile</h3>
+                <p>Desenvolvemos aplicativos para iPhone, iPad e dispositivos Android, de celulares a tablets.</p>
+              </article>
+            </li>
+            <li class="last">
+              <span>3</span>
+              <article>
+                <h3>Consultoria</h3>
+                <p>Prestamos consultoria em desenvolvimento web e mobile, performance e cloud computing.</p>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="projetos"><a name="projetos" class="anchor clearfix"></a>
+        <div class="wrap title">
+          <h2>É nesse ritmo que fazemos aplicativos <span>Mobile</span> e <span>Web</span>.</h2>
+        </div>
+        <div class="clearfix"></div>
+        <div class="wrap">
+          <nav id="slider">
+            <ul>
+              <li class="wrap">
+                <ul>
+                  {% for post in site.posts limit:6 offset:0 %}
+                    {% include projects.html %}   
+                  {% endfor %}
+                </ul>
+              </li>
+              <li class="wrap">
+                <ul>
+                  {% for post in site.posts limit:6 offset:6 %}
+                    {% include projects.html %}   
+                  {% endfor %}
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <nav class="pages wrap">
+          <ul>
+            <li id="p1"><a href="javascript:void(0);"><span>1</span></a></li>
+            <li id="p2"><a href="javascript:void(0);"><span>2</span></a></li>
+            <!--li id="p3"><a href="javascript:void(0);"><span>3</span></a></li-->
+          </ul>
+        </nav>
+      </section>
+      <section id="clientes" class="clearfix">
+        <div class="wrap">
+          <h2>
+            Clientes que dão um show com a Coderockr!
+          </h2>
+          <ul>
+            <li><img src="/public/images/clientes/logo-arkpad.png" width="100" height="70" alt="Arkpad"></li>
+            <li><img src="/public/images/clientes/logo-rps.png" width="100" height="70" alt="RPS Fácil"></li>
+            <li><img src="/public/images/clientes/logo-icarros.png" width="100" height="70" alt="iCarros"></li>
+            <li><img src="/public/images/clientes/logo-codesquad.png" width="100" height="70" alt="Code Squad"></li>
+            <li><img src="/public/images/clientes/logo-softplan.png" width="100" height="70" alt="Softplan"></li>
+            <li><img src="/public/images/clientes/logo-mih.png" width="100" height="70" alt="MIH Group"></li>
+            <li><img src="/public/images/clientes/logo-sh.png" width="100" height="70" alt="SH"></li>
+            <li><img src="/public/images/clientes/logo-unipay.png" width="100" height="70" alt="Unipay"></li>
+            <li><img src="/public/images/clientes/logo-casabrasil.png" width="100" height="70" alt="Casa Brasil"></li>
+            <li><img src="/public/images/clientes/logo-unochapeco.png" width="100" height="70" alt="Unochapecó"></li>
+            <li><img src="/public/images/clientes/logo-sommaior.png" width="100" height="70" alt="Som Maior"></li>
+            <li><img src="/public/images/clientes/logo-indaia.png" width="100" height="70" alt="Restaurante Indaiá"></li>
+            <li><img src="/public/images/clientes/logo-ng.png" width="100" height="70" alt="NG Informaática"></li>
+            <li><img src="/public/images/clientes/logo-weg.png" width="100" height="70" alt="WEG"></li>
+          </ul>
+        </div>
+      </section>
+      <section id="sobre" class="clearfix"><a name="sobre" class="anchor clearfix"></a>
+        <div class="wrap">
+          <h2><span>Bons programadores</span> são únicos, assim como <span>estrelas no mundo do rock</span>.</h2>
+        </div>
+        <div class="line clearfix"></div>        
+        <div class="wrap">
+          <ul>
+            <li>
+              {% include andre.html %}
+            </li>
+            <li class="last">
+              {% include bibi.html %}
+            </li>
+            <li>
+              {% include elton.html %}
+            </li>
+            <li class="last">
+              {% include julia.html %}
+            </li>
+            <li>
+              {% include leonardo.html %}
+            </li>
+            <li class="last">
+              {% include mateus.html %}
+            </li>
+            <li>
+              {% include thiago.html %}              
+            </li>
+            <li class="last">
+              
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="contato" class="clearfix"><a name="contato" class="anchor clearfix"></a>
+        <h2>A Coderockr está pronta para dar um<br />show, entre em contato!</h2>
+        <div class="line clearfix"></div>        
+        <div class="wrap">
+          <div class="col1">
+            <ul>
+              <li class="clearfix">
+                <a target="mapa" href="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Rua+Ministro+Cal%C3%B3geras,+910,+Joinville+-+Santa+Catarina,+Brasil&amp;aq=0&amp;oq=Rua+Ministro+Calogeras+910&amp;sll=37.0625,-95.677068&amp;sspn=54.665451,96.328125&amp;ie=UTF8&amp;hq=&amp;hnear=R.+Min.+Cal%C3%B3geras,+910+-+Centro,+Joinville+-+Santa+Catarina,+89201-485,+Brazil&amp;t=m&amp;z=14&amp;iwloc=A&amp;ll=-26.307923,-48.84879&amp;output=embed" class="map-link" title="Clique para ver no mapa">
+                  <img src="/public/images/contact-map.png" width="40" height="40" alt="" />Rua Ministro Calogeras 910, sobreloja<span class="coma">,</span> <span>Bairro Atiradores  |  89201-485  |  Joinville  |  SC</span>
+                </a>
+                <div class="map"><iframe width="100%" height="100%" frameborder="0" scrolling="no" name="mapa" marginheight="0" marginwidth="0"></iframe></div>
+              </li>
+              <li class="clearfix"><a href="tel:04732276359" class="call"><img src="/public/images/contact-phone.png" width="40" height="40" alt="" /><span>47 3227.6359</span></a></li>
+              <li class="clearfix"><a href="mailto:contato@coderockr.com?subject=Contato pelo site" title="Envie um e-mail para contato@coderockr.com"><img src="/public/images/contact-mail.png" width="40" height="40" alt="" /><span>contato@coderockr.com</span></a></li>
+            </ul>
+          </div>
+          <div class="col2">
+            <ul>
+              <li class="clearfix"><a href="http://facebook.com/coderockr" target="_blank" title="Facebook da Coderockr"><img src="/public/images/contact-facebook.png" width="40" height="40" alt="" /><span>Facebook</span></a></li>
+              <li class="clearfix"><a href="http://twitter.com/coderockr" target="_blank" title="Twitter da Coderockr"><img src="/public/images/contact-twitter.png" width="40" height="40" alt="" /><span>@coderockr</span></a></li>
+              <li class="clearfix"><a href="https://plus.google.com/114839342124659023408" target="_blank" title="Google+ Coderockr" rel="publisher"><img src="/public/images/contact-gplus.png" width="40" height="40" alt="" /><span>Google+</span></a></li>
+            </ul>
+          </div>
+      </section>
+    </div>
+    <footer>
+      <div class="wrap clearfix">
+        <div class="col1">
+          <p>
+            <img src="/public/images/rockrhand.png" width="20" height="52" alt="" />
+            Rua Ministro Calogeras 910, sobreloja<br />Bairro Atiradores | 89201-485<br />Joinville | SC | 47 3227.6359
+          </p>
+        </div>
+        <div class="col2">
+          <nav>
+            <ul>
+              <li><a href="#home">Topo</a></li>
+              <li><a href="#servicos">Serviços</a></li>
+              <li><a href="#projetos">Projetos</a></li>
+              <li><a href="#clientes">Clientes</a></li>
+              <li><a href="#sobre">Sobre</a></li>
+              <li><a href="http://blog.coderockr.com" target="_blank">Blog</a></li>
+              <li><a href="#contato">Contato</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/public/scripts/libs/jquery-1.6.2.min.js"><\/script>')</script>
+
+  <script defer src="/public/scripts/plugins.js"></script>
+  <script defer src="/public/scripts/script.js"></script>
+
+  <script>
+    window._gaq = [['_setAccount','UA-584603-6'],['_trackPageview'],['_trackPageLoadTime']];
+    Modernizr.load({
+      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+    });
+  </script>
+
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+</body>
+</html>
