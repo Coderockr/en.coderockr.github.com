@@ -112,6 +112,10 @@ $(document).ready(function() {
 			return false;
 		}
 	});
+	$('div[class=^"language-"] a').bind("click", function(){
+		var langValue = $(this).attr("rel");
+		createCookie("idioma", langValue, 60);
+	});
 });
 function createCookie(name, value, days) {
     if (days) {
