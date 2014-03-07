@@ -138,7 +138,6 @@
           <ul>
             <li id="p1"><a href="javascript:void(0);"><span>1</span></a></li>
             <li id="p2"><a href="javascript:void(0);"><span>2</span></a></li>
-            <!--li id="p3"><a href="javascript:void(0);"><span>3</span></a></li-->
           </ul>
         </nav>
       </section>
@@ -180,19 +179,22 @@
               {% include bibi.html %}
             </li>
             <li>
-              {% include elton.html %}
+              {% include darlan.html %}
             </li>
             <li class="last">
+              {% include elton.html %}
+            </li>
+            <li>
               {% include julia.html %}
             </li>
             <li class="last">
               {% include mateus.html %}
             </li>
             <li>
-              {% include thiago.html %}              
+              {% include pedro.html %} 
             </li>
             <li class="last">
-              
+              {% include thiago.html %} 
             </li>
           </ul>
         </div>
@@ -260,13 +262,6 @@
     Modernizr.load({
       load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
     });
-  </script>
-
-  <script>
-      /*var language = window.navigator.userLanguage || window.navigator.language;
-      if(language.toLowerCase() != 'en') {
-        window.location.href='http://coderockr.com';
-      }*/
   </script>
 
   <!--[if lt IE 7 ]>
